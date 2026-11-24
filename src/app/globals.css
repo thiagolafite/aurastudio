@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@source "../";
+
+:root {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  background-color: #09090b;
+  color: #f4f4f5;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+/* =========================================================
+   Light Mode Theme (preserves artwork & social mockups)
+   ========================================================= */
+html.light body {
+  background-color: #f4f4f5;
+  color: #18181b;
+}
+
+html.light :is(.bg-zinc-950, .bg-zinc-950\/90, .bg-zinc-950\/70, .bg-zinc-950\/60, .bg-zinc-950\/50, .bg-zinc-950\/40):not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  background-color: #f4f4f5 !important;
+}
+
+html.light :is(.bg-zinc-900, .bg-zinc-900\/90, .bg-zinc-900\/70, .bg-zinc-900\/60, .bg-zinc-900\/50):not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  background-color: #ffffff !important;
+}
+
+html.light :is(.bg-zinc-800, .bg-zinc-800\/90, .bg-zinc-800\/80):not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  background-color: #e4e4e7 !important;
+}
+
+html.light .from-zinc-900:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  --tw-gradient-from: #ffffff !important;
+  --tw-gradient-via: #fafafa !important;
+  --tw-gradient-to: #eef2ff !important;
+}
+
+html.light :is(.border-zinc-800, .border-zinc-800\/80, .border-zinc-800\/70, .border-zinc-700, .border-zinc-700\/80):not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  border-color: #e4e4e7 !important;
+}
+
+html.light :is(.divide-zinc-800, .divide-zinc-800\/80, .divide-zinc-800\/70) > :not(:last-child) {
+  border-color: #e4e4e7 !important;
+}
+
+/* Text colors in Light Mode (skip solid colored buttons & preserved mockups) */
+html.light :is(.text-white, .text-zinc-100, .text-zinc-200):not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *):not([class*="bg-indigo-600"]):not([class*="bg-emerald-600"]):not([class*="from-pink-600"]):not([class*="bg-rose-"]) {
+  color: #18181b !important;
+}
+
+html.light .text-zinc-300:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #3f3f46 !important;
+}
+
+html.light .text-zinc-400:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #52525b !important;
+}
+
+html.light .text-zinc-500:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #71717a !important;
+}
+
+html.light .text-indigo-200:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *),
+html.light .text-indigo-300:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #4338ca !important;
+}
+
+html.light .text-emerald-300:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *),
+html.light .text-emerald-400:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #047857 !important;
+}
+
+html.light .text-pink-300:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #be185d !important;
+}
+
+html.light .text-cyan-300:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #0e7490 !important;
+}
+
+html.light .text-blue-300:not([data-preserve-theme="true"]):not([data-preserve-theme="true"] *) {
+  color: #1d4ed8 !important;
+}
+
+html.light :is(input, textarea, select):not([type="color"]):not([type="range"]):not([type="checkbox"]) {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border-color: #d4d4d8 !important;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

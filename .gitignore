@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.vercel/
+.env
+.env.local
+data/store.json
+data/credentials.json
+public/uploads/*
+!public/uploads/.gitkeep
+*.tsbuildinfo
